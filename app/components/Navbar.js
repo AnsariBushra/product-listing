@@ -4,9 +4,9 @@ import React from "react";
 const Navbar = (props) => {
   return (
     <div>
-      <nav className="bg-gray-800">
+      <nav className="bg-gray-800 py-3">
         <div className="py-2 flex justify-between items-center sm:px-6 lg:px-8">
-          <div className="flex-shrink-0 text-white text-xl cursor-pointer">
+          <div className="flex-shrink-0 text-white text-2xl cursor-pointer">
             <Link href={"/"}>Products Page</Link>
           </div>
           <div className="hidden sm:flex sm:ml-6">

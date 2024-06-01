@@ -11,7 +11,7 @@ const Footer = () => {
           target="_blank"
           className="text-sm hover:border-b border-white duration-150"
         >
-          &copy; Bushra Ansari
+          &copy;bushraansari.0517@gmail.com
         </Link>
       </div>
     </div>

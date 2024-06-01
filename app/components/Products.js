@@ -42,7 +42,7 @@ const Products = () => {
         <h1 className="font-medium text-3xl mb-4">PRODUCT LIST</h1>
         <input
           type="text"
-          placeholder="Search Products"
+          placeholder="Search Products..."
           className="border mb-5 p-2 rounded-md"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
@@ -51,9 +51,9 @@ const Products = () => {
       </div>
       <div className="">
         {loading ? (
-          <div className="justify-center text-center">Loading...</div>
+          <div className="justify-center text-center mt-6 font-medium text-lg">Loading...</div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 px-10">
+          <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-4 gap-10 px-10">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((element) => (
                 <div key={element.id} className="hover:outline mt-8">

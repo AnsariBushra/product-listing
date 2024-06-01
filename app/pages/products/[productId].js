@@ -38,7 +38,6 @@ const ProductDetails = ({ productId }) => {
       <img src={product.image} alt={product.title} />
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
-      {/* Add more product details here */}
     </div>
   );
 };

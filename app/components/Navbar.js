@@ -1,5 +1,4 @@
 import React from "react";
-import Search from "./Search";
 
 const Navbar = (props) => {
   return (
@@ -8,9 +7,6 @@ const Navbar = (props) => {
         <div className="py-2 flex justify-between items-center sm:px-6 lg:px-8">
           <div className="flex-shrink-0 text-white text-xl cursor-pointer">
             Products Page
-          </div>
-          <div className="flex items-center sm:hidden">
-            <Search />
           </div>
           <div className="hidden sm:flex sm:ml-6">
             <div className="flex space-x-4">
@@ -41,7 +37,6 @@ const Navbar = (props) => {
             </div>
           </div>
           <div className="hidden sm:flex sm:items-center sm:ml-6">
-            <Search />
           </div>
         </div>
       </nav>

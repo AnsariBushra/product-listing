@@ -1,11 +1,21 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const Footer = () => {
   return (
-    <div>
-      I am a footer
+    <div className="bg-gray-900 w-full p-2 mt-10">
+      <div className="text-center text-white">
+        <p className="">❤️ Made With Love ❤️</p>
+        <Link
+          href={"https://github.com/AnsariBushra"}
+          target="_blank"
+          className="text-sm hover:border-b border-white duration-150"
+        >
+          &copy; Bushra Ansari
+        </Link>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

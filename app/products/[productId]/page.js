@@ -1,28 +1,33 @@
-// pages/products/[productId].js
+"use client";
+import React from "react";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
-import { useEffect, useState } from 'react';
+function ProductDetails({ params }) {
+  const productUrl = params.productId;
 
-const ProductDetails = ({ productId }) => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchProductDetails = async () => {
       try {
-        const response = await fetch(`https://dummyjson.com/products/${productId}`);
+        const response = await fetch(
+          `https://fakestoreapi.com/products/${productUrl}`
+        );
         if (!response.ok) {
-          throw new Error('Failed to fetch product details');
+          throw new Error("Failed to fetch product details");
         }
         const productData = await response.json();
         setProduct(productData);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching product details:', error);
+        console.error("Error fetching product details:", error);
       }
     };
 
     fetchProductDetails();
-  }, [productId]);
+  }, [productUrl]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -35,11 +40,18 @@ const ProductDetails = ({ productId }) => {
   return (
     <div>
       <h1>{product.title}</h1>
-      <img src={product.image} alt={product.title} />
+      <Image
+        width={200}
+        height={200}
+        src={product.image}
+        priority
+        alt={product.title}
+        className="h-auto w-auto"
+      />
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
     </div>
   );
-};
+}
 
 export default ProductDetails;
